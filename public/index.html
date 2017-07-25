@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GYST List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral">
+    <link rel="stylesheet" href="vendor/styles/style.css">
+    <link rel="stylesheet" href="vendor/styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script id="list-template" type="text/x-handlebars-template">
+      <li id="task" class="task">
+        <h4>{{title}}</h4>
+        <div>{{timing}}</div>
+        <p>{{description}}</p>
+        <button type="submit" class="remove">Remove Task</button>
+      </li>
+    </script>
+  </head>
+  <body>
+    <header>
+      <hgroup>
+        <h1>GYST List</h1>
+        <h2>Get Your Shit Together</h2>
+      </hgroup>
+      <span class="icon-menu"></span>
+      <div class="clearfix"></div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="new-task">
+        <h3>Add More Shit</h3>
+        <select>
+          <option value="">-- Pick A Category --</option>
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="up-comming">Up Comming</option>
+        </select>
+        <form>
+          <input type="text" id="title" placeholder="Task Name" required>
+          <input type="text" id="start" placeholder="Start: MM/DD/YY">
+          <input type="text" id="end" placeholder="End: MM/DD/YY">
+          <textarea name="description" placeholder="Description"></textarea>
+          <button type="submit" id="add">Add Task</button>
+        </form>
+      </section>
+      <section id="current-tasks">
+        <h3 data-list="daily">Daily Tasks</h3>
+        <ul id="daily" class="lists">
+          <!--Daily tasks go here-->
+        </ul>
+        <h3 data-list="weekly">Weekly Tasks</h3>
+        <ul id="weekly" class="lists">
+          <!--Weekly Tasks Go here-->
+        </ul>
+        <h3 data-list="up-comming">Up Comming</h3>
+        <ul id="up-comming" class="lists">
+          <!--up comming events/tasks go here-->
+        </ul>
+      </section>
+      <section id="broken">
+        <h6>404</h6>
+        <p>Page Under Construction</p>
+        <a href="/">Return Home</p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy;EnjoytheStorm</p>
+      <div>
+        <a href="http://steamcommunity.com/id/brainspork"><span class="icon-steam2"></span></a>
+        <a href="https://github.com/brainspork"><span class="icon-github"></span></a>
+        <a href="https://www.linkedin.com/in/anthony-konschuh/"><span class="icon-linkedin"></span></a>
+      </div>
+    </footer>
+    <script src="vendor/scripts/jquery.js"></script>
+    <script src="vendor/scripts/page.js"></script>
+    <script src="vendor/scripts/handlebars.js"></script>
+    <script src="scripts/model/task.js"></script>
+    <script src="scripts/view/taskView.js"></script>
+    <script src="scripts/control/navController.js"></script>
+    <script src="scripts/control/taskController.js"></script>
+    <script src="scripts/control/routes.js"></script>
+  </body>
+</html>

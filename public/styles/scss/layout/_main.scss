@@ -1,0 +1,35 @@
+main{
+  width: 100%;
+  font-family: $font;
+  margin-top: 22%;
+  #current-tasks{
+    width: 100%;
+    margin-top: 2%;
+    .lists{
+      width: 96%;
+      height: 0;
+      overflow: auto;
+      margin: 0 auto;
+      transition: 350ms height;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000;
+      border-radius: 3px;
+    }
+  }
+  #broken{
+    text-align: center;
+    h6{
+      font-size: 15vw;
+    }
+    p{
+      font-size: 5vw;
+    }
+    a{
+      text-decoration: underline;
+    }
+  }
+}
+
+.active{
+  height: 45vw !important;
+}

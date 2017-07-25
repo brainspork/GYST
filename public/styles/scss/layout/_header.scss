@@ -1,0 +1,57 @@
+header {
+  position: fixed;
+  top: 0;
+  font-family: $font;
+  background: #fff;
+  width: 100%;
+  border-bottom: 5px solid #444;
+  padding-bottom: 2%;
+  hgroup{
+    display: inline-block;
+    float: left;
+    margin-left: 2%;
+    margin-top: 2%;
+    text-align: center;
+    h1{
+      font-size: 10vw;
+      font-weight:700;
+    }
+
+    h2{
+      font-size: 5vw;
+    }
+  }
+
+  .icon-menu {
+    float: right;
+    font-size: 10vw;
+    margin-right: 2%;
+    margin-top: 4%;
+  }
+
+  nav{
+    display: none;
+    position: fixed;
+    margin-top: 2%;
+    width: 100%;
+    ul{
+      margin: 25vw auto;
+      li{
+        text-align: center;
+        font-size: 15vw;
+        a{
+          color: #fff !important;
+        }
+        a:hover{
+          color: $prime;
+        }
+      }
+    }
+  }
+
+  .nav-display{
+    display: block;
+    background: rgba(0, 0, 0, 0.7);
+    height: 200vw;
+  }
+}

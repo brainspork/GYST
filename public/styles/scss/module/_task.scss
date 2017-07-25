@@ -1,0 +1,25 @@
+.task{
+  display: inline-block;
+  width: 94%;
+  border: 2px solid $sec;
+  border-radius: 3px;
+  background: $prime;
+  padding: 2%;
+  margin: 2% 0;
+  font-size: 4vw;
+  h4{
+    font-weight: 700;
+    font-size: 5vw;
+  }
+  button{
+    display: none;
+  }
+}
+
+.pending{
+  background: $remove;
+  button{
+    display: inline-block;
+    float: right;
+  }
+}
